@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Tenses Master Guide - IELTS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            min-height: 100vh;
+            padding: 2rem;
+            color: #e2e8f0;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: #1e293b;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            border: 1px solid #334155;
+        }
+
+        .header-title {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .header-title svg {
+            width: 32px;
+            height: 32px;
+            color: #22d3ee;
+        }
+
+        .header-title h1 {
+            font-size: 2rem;
+            color: #67e8f9;
+        }
+
+        .header p {
+            color: #cbd5e1;
+        }
+
+        .tense-card {
+            background: #1e293b;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .tense-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+            background: #27374d;
+        }
+
+        .tense-card h2 {
+            color: #67e8f9;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tense-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .tense-section {
+            background: #0f172a;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #334155;
+        }
+
+        .tense-section h3 {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .structure h3 { color: #34d399; }
+        .timeline h3 { color: #a78bfa; }
+        .example h3 { color: #fbbf24; }
+
+        .tense-section p {
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .structure p {
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+
+        .timeline-desc {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            color: #cbd5e1;
+        }
+
+        .timeline-visual {
+            color: #22d3ee;
+            font-family: monospace;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-align: center;
+            padding: 0.5rem;
+        }
+
+        .example p {
+            font-style: italic;
+        }
+
+        /* Border colors for different tense categories */
+        .present-1 { border-left-color: #22d3ee; }
+        .present-2 { border-left-color: #06b6d4; }
+        .present-3 { border-left-color: #0891b2; }
+        .present-4 { border-left-color: #0e7490; }
+        
+        .past-1 { border-left-color: #34d399; }
+        .past-2 { border-left-color: #10b981; }
+        .past-3 { border-left-color: #059669; }
+        .past-4 { border-left-color: #047857; }
+        
+        .future-1 { border-left-color: #a78bfa; }
+        .future-2 { border-left-color: #8b5cf6; }
+        .future-3 { border-left-color: #7c3aed; }
+        .future-4 { border-left-color: #6d28d9; }
+
+        .grammar-terms {
+            background: #1e293b;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-top: 2rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            border: 1px solid #334155;
+        }
+
+        .grammar-terms h3 {
+            color: #67e8f9;
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .term-card {
+            background: #0f172a;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border: 1px solid #334155;
+        }
+
+        .term-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .term-1 h4 { color: #34d399; }
+        .term-2 h4 { color: #a78bfa; }
+        .term-3 h4 { color: #fbbf24; }
+        .term-4 h4 { color: #fb7185; }
+        .term-5 h4 { color: #2dd4bf; }
+
+        .term-card p {
+            color: #cbd5e1;
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        .term-card .example-text {
+            color: #22d3ee;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+
+        .term-card .note {
+            color: #94a3b8;
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .header-title h1 {
+                font-size: 1.5rem;
+            }
+            
+            .tense-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-title">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+                <h1>English Tenses Master Guide</h1>
+            </div>
+            <p>Complete reference for IELTS Writing & Speaking excellence</p>
+        </div>
+
+        <div class="tense-card present-1">
+            <h2>Simple Present</h2>
+            <div class="tense-grid">
+                <div class="tense-section structure">
+                    <h3>Structure</h3>
+                    <p>Subject + base verb (+ s/es for 3rd person singular)</p>
+                </div>
+                <div class="tense-section timeline">
+                    <h3>Time Reference</h3>
+                    <p class="timeline-desc">Habitual/Repeated Actions & Universal Truths</p>
+                    <p class="timeline-visual">⟲ NOW ⟲</p>
+                </div>
+                <div class="tense-section example">
+                    <h3>Example Sentence</h3>
+                    <p>"She works at a hospital every weekday."</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tense-card present-2">
+            <h2>Present Continuous</h2>
+            <div class="tense-grid">
+                <div class="tense-section structure">
+                    <h3>Structure</h3>
+                    <p>Subject + am/is/are + present participle</p>
+                </div>
+                <div class="tense-section timeline">
+                    <h3>Time Reference</h3>
+                    <p class="timeline-desc">Actions Happening at This Moment</p>
+                    <p class="timeline-visual">← NOW →</p>
+                </div>
+                <div class="tense-section example">
+                    <h3>Example Sentence</h3>
+                    <p>"I am preparing for my IELTS exam this month."</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tense-card present-3">
+            <h2>Present Perfect</h2>
+            <div class="tense-grid">
+                <div class="tense-section structure">
+                    <h3>Structure</h3>
+                    <p>Subject + have/has + past participle</p>
+                </div>
+                <div class="tense-section timeline">
+                    <h3>Time Reference</h3>
+                    <p class="timeline-desc">Past Action Connected to Present (Unspecified Time)</p>
+                    <p class="timeline-visual">PAST ═══▶ NOW</p>
+                </div>
+                <div class="tense-section example">
+                    <h3>Example Sentence</h3>
+                    <p>"I have studied English for five years."</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tense-card present-4">
+            <h2>Present Perfect Continuous</h2>
+            <div class="tense-grid">
+                <div class="tense-section structure">
+                    <h3>Structure</h3>
+                    <p>Subject + have/has been + present participle</p>
+                </div>
+                <div class="tense-section timeline">
+                    <h3>Time Reference</h3>
+                    <p class="timeline-desc">Ongoing Action with Duration (Past → Present)</p>
+                    <p class="timeline-visual">PAST ≈≈≈▶ NOW</p>
+                </div>
+                <div class="tense-section example">
+                    <h3>Example Sentence</h3>
+                    <p>"They have been living in London since 2020."</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tense-card past-1">
+            <h2>Simple Past</h2>
+            <div class="tense-grid">
+                <div class="tense-section structure">
+                    <h3>Structure</h3>
+                    <p>Subject + past verb (regular: base + ed, or irregular form)</p>
+                </div>
+                <div class="tense-section timeline">
+                    <h3>Time Reference</h3>
+                    <p class="timeline-desc">Completed Action at Specific Past Time</p>
+                    <p class="timeline-visual">● PAST | now</p>
+                </div>
+                <div class="tense-section example">
+                    <h3>Example Sentence</h3>
+                    <p>"I took the IELTS mock exam last year."</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tense-card past-2">
+            <h2>Past Continuous</h2>
+            <div class="tense-grid">
+                <div class="tense-section structure">
+                    <h3>Structure</h3>
+                    <p>Subject + was/were + present participle</p>
+                </div>
+                <div class="tense-section timeline">
+                    <h3>Time Reference</h3>
+                    <p class="timeline-desc">Action in Progress at a Past Moment</p>
+                    <p class="timeline-visual">PAST ← ● → | now</p>
+                </div>
+                <div class="tense-section example">
+                    <h3>Example Sentence</h3>
+                    <p>"I was studying when she called me yesterday."</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tense-card past-3">
+            <h2>Past Perfect</h2>
+            <div class="tense-grid">
+                <div class="tense-section structure">
+                    <h3>Structure</h3>
+                    <p>Subject + had + past participle</p>
+                </div>
+                <div class="tense-section timeline">
+                    <h3>Time Reference</h3>
+                    <p class="timeline-desc">Earlier Past Action Before Another Past Action</p>
+                    <p class="timeline-visual">● EARLIER → ● PAST | now</p>
+                </div>
+                <div class="tense-section example">
+                    <h3>Example Sentence</h3>
+                    <p>"I had finished my homework before dinner started."</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tense-card past-4">
+            <h2>Past Perfect Continuous</h2>
+            <div class="tense-grid">
+                <div class="tense-section structure">
+                    <h3>Structure</h3>
+                    <p>Subject + had been + present participle</p>
+                </div>
+                <div class="tense-section timeline">
+                    <h3>Time Reference</h3>
+                    <p class="timeline-desc">Duration of Action Before Past Moment</p>
+                    <p class="timeline-visual">EARLIER ≈≈≈▶ ● PAST | now</p>
+                </div>
+                <div class="tense-section example">
+                    <h3>Example Sentence</h3>
+                    <p>"She had been working there for two years before she quit."</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tense-card future-1">
+            <h2>Simple Future (will)</h2>
+            <div class="tense-grid">
+                <div class="tense-section structure">
+                    <h3>Structure</h3>
+                    <p>Subject + will + base verb</p>
+                </div>
+                <div class="tense-section timeline">
+                    <h3>Time Reference</h3>
+                    <p class="timeline-desc">Predictions, Spontaneous Decisions, Promises</p>
+                    <p class="timeline-visual">now | ● FUTURE</p>
+                </div>
+                <div class="tense-section example">
+                    <h3>Example Sentence</h3>
+                    <p>"I will take the IELTS exam on November 20th."</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tense-card future-2">
+            <h2>Simple Future (going to)</h2>
+            <div class="tense-grid">
+                <div class="tense-section structure">
+                    <h3>Structure</h3>
+                    <p>Subject + am/is/are going to + base verb</p>
+                </div>
+                <div class="tense-section timeline">
+                    <h3>Time Reference</h3>
+                    <p class="timeline-desc">Planned Actions, Intentions, Clear Evidence</p>
+                    <p class="timeline-visual">now | ● FUTURE</p>
+                </div>
+                <div class="tense-section example">
+                    <h3>Example Sentence</h3>
+                    <p>"I am going to study grammar tonight."</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tense-card future-3">
+            <h2>Future Continuous</h2>
+            <div class="tense-grid">
+                <div class="tense-section structure">
+                    <h3>Structure</h3>
+                    <p>Subject + will be + present participle</p>
+                </div>
+                <div class="tense-section timeline">
+                    <h3>Time Reference</h3>
+                    <p class="timeline-desc">Action in Progress at Future Time</p>
+                    <p class="timeline-visual">now | ← ● → FUTURE</p>
+                </div>
+                <div class="tense-section example">
+                    <h3>Example Sentence</h3>
+                    <p>"This time next week, I will be taking my IELTS exam."</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tense-card future-4">
+            <h2>Future Perfect</h2>
+            <div class="tense-grid">
+                <div class="tense-section structure">
+                    <h3>Structure</h3>
+                    <p>Subject + will have + past participle</p>
+                </div>
+                <div class="tense-section timeline">
+                    <h3>Time Reference</h3>
+                    <p class="timeline-desc">Action Completed Before Future Point</p>
+                    <p class="timeline-visual">now ═══▶ ● FUTURE</p>
+                </div>
+                <div class="tense-section example">
+                    <h3>Example Sentence</h3>
+                    <p>"By December, I will have completed my IELTS exam."</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tense-card future-4">
+            <h2>Future Perfect Continuous</h2>
+            <div class="tense-grid">
+                <div class="tense-section structure">
+                    <h3>Structure</h3>
+                    <p>Subject + will have been + present participle</p>
+                </div>
+                <div class="tense-section timeline">
+                    <h3>Time Reference</h3>
+                    <p class="timeline-desc">Duration Until Future Point</p>
+                    <p class="timeline-visual">now ≈≈≈▶ ● FUTURE</p>
+                </div>
+                <div class="tense-section example">
+                    <h3>Example Sentence</h3>
+                    <p>"By next month, I will have been studying English for six years."</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grammar-terms">
+            <h3>Grammar Terms Explained</h3>
+            
+            <div class="term-card term-1">
+                <h4>Base Verb (Infinitive without "to")</h4>
+                <p>The simplest form of a verb, without any tense or conjugation.</p>
+                <p class="example-text">Examples: work, study, go, eat, write</p>
+            </div>
+
+            <div class="term-card term-2">
+                <h4>Past Participle</h4>
+                <p>The verb form used with perfect tenses and passive voice. For regular verbs, add -ed. Irregular verbs have unique forms.</p>
+                <p class="example-text">Regular: worked, studied, played</p>
+                <p class="example-text">Irregular: gone, written, taken, eaten, been</p>
+            </div>
+
+            <div class="term-card term-3">
+                <h4>Present Participle</h4>
+                <p>The verb form ending in -ing, used in continuous tenses. Always formed by adding -ing to the base verb.</p>
+                <p class="example-text">Examples: working, studying, going, eating, writing</p>
+            </div>
+
+            <div class="term-card term-4">
+                <h4>Gerund</h4>
+                <p>A verb ending in -ing that functions as a noun. While identical in form to the present participle, gerunds name activities or states.</p>
+                <p class="example-text">Examples: "Swimming is healthy." / "I enjoy reading."</p>
+                <p class="note">Note: In "I am swimming," swimming is a present participle (part of present continuous). In "Swimming is fun," swimming is a gerund (acting as a noun).</p>
+            </div>
+
+            <div class="term-card term-5">
+                <h4>Auxiliary Verbs (Helping Verbs)</h4>
+                <p>Verbs that help form tenses, questions, and negatives. They combine with main verbs.</p>
+                <p class="example-text">Common auxiliaries: am, is, are, was, were, have, has, had, will, would, shall</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
