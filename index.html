@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English Tenses Master Guide - IELTS</title>
+    <title>IELTS Academic Complete Guide & Cheat Sheet</title>
+    <meta name="description" content="Complete IELTS Academic guide with Writing Task 1 & 2, Speaking Parts 1-3, English tenses, and essential tips for Band 7+">
     <style>
         * {
             margin: 0;
@@ -11,52 +12,263 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-tertiary: #27374d;
+            --text-primary: #e2e8f0;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+            --accent-cyan: #22d3ee;
+            --accent-blue: #67e8f9;
+            --accent-green: #34d399;
+            --accent-purple: #a78bfa;
+            --accent-yellow: #fbbf24;
+            --border-color: #334155;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
-            min-height: 100vh;
-            padding: 2rem;
-            color: #e2e8f0;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-primary) 100%);
+            color: var(--text-primary);
+            line-height: 1.6;
         }
 
-        .container {
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(30, 41, 59, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .nav-container {
             max-width: 1400px;
             margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
         }
 
-        .header {
-            background: #1e293b;
-            border-radius: 12px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-            border: 1px solid #334155;
-        }
-
-        .header-title {
+        .nav-brand {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent-blue);
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-cyan);
+        }
+
+        /* Mobile menu toggle */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 6rem 2rem 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 3rem 2rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--accent-blue);
             margin-bottom: 1rem;
         }
 
-        .header-title svg {
-            width: 32px;
-            height: 32px;
-            color: #22d3ee;
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
         }
 
-        .header-title h1 {
+        /* Section Styles */
+        section {
+            margin-bottom: 4rem;
+            scroll-margin-top: 100px;
+        }
+
+        .section-header {
+            background: var(--bg-secondary);
+            padding: 1.5rem 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--accent-cyan);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-header h2 {
             font-size: 2rem;
-            color: #67e8f9;
+            color: var(--accent-blue);
+            margin-bottom: 0.5rem;
         }
 
-        .header p {
-            color: #cbd5e1;
+        .section-header p {
+            color: var(--text-secondary);
+            font-size: 1rem;
         }
 
+        /* Content Cards */
+        .content-card {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .content-card h3 {
+            color: var(--accent-cyan);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .content-card h4 {
+            color: var(--accent-green);
+            font-size: 1.2rem;
+            margin: 1.5rem 0 1rem;
+        }
+
+        .content-card h5 {
+            color: var(--accent-purple);
+            font-size: 1rem;
+            margin: 1rem 0 0.5rem;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: var(--bg-primary);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th {
+            background: var(--bg-tertiary);
+            color: var(--accent-cyan);
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-secondary);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Lists */
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+
+        li {
+            margin: 0.5rem 0;
+            color: var(--text-secondary);
+        }
+
+        /* Checkmarks and crosses */
+        .check {
+            color: var(--accent-green);
+            font-weight: bold;
+        }
+
+        .cross {
+            color: #fb7185;
+            font-weight: bold;
+        }
+
+        /* Code/Formula blocks */
+        code, .formula {
+            background: var(--bg-primary);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: var(--accent-yellow);
+            font-size: 0.9rem;
+        }
+
+        pre {
+            background: var(--bg-primary);
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+
+        /* Badges */
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+        }
+
+        .badge-time {
+            background: var(--accent-purple);
+            color: var(--bg-primary);
+        }
+
+        .badge-words {
+            background: var(--accent-green);
+            color: var(--bg-primary);
+        }
+
+        /* Tense Cards (from original design) */
         .tense-card {
-            background: #1e293b;
+            background: var(--bg-secondary);
             border-radius: 12px;
             padding: 1.5rem;
             margin-bottom: 1rem;
@@ -68,29 +280,29 @@
         .tense-card:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
-            background: #27374d;
+            background: var(--bg-tertiary);
         }
 
-        .tense-card h2 {
-            color: #67e8f9;
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
+        .tense-card h3 {
+            color: var(--accent-blue);
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
         }
 
         .tense-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1rem;
         }
 
         .tense-section {
-            background: #0f172a;
+            background: var(--bg-primary);
             padding: 1rem;
             border-radius: 8px;
-            border: 1px solid #334155;
+            border: 1px solid var(--border-color);
         }
 
-        .tense-section h3 {
+        .tense-section h4 {
             font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 0.05em;
@@ -98,12 +310,12 @@
             font-weight: 600;
         }
 
-        .structure h3 { color: #34d399; }
-        .timeline h3 { color: #a78bfa; }
-        .example h3 { color: #fbbf24; }
+        .structure h4 { color: var(--accent-green); }
+        .timeline h4 { color: var(--accent-purple); }
+        .example h4 { color: var(--accent-yellow); }
 
         .tense-section p {
-            color: #e2e8f0;
+            color: var(--text-primary);
             line-height: 1.6;
         }
 
@@ -112,14 +324,8 @@
             font-size: 0.9rem;
         }
 
-        .timeline-desc {
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-            color: #cbd5e1;
-        }
-
         .timeline-visual {
-            color: #22d3ee;
+            color: var(--accent-cyan);
             font-family: monospace;
             font-size: 1.1rem;
             font-weight: bold;
@@ -131,384 +337,1246 @@
             font-style: italic;
         }
 
-        /* Border colors for different tense categories */
+        /* Border colors for tenses */
         .present-1 { border-left-color: #22d3ee; }
         .present-2 { border-left-color: #06b6d4; }
         .present-3 { border-left-color: #0891b2; }
         .present-4 { border-left-color: #0e7490; }
-        
         .past-1 { border-left-color: #34d399; }
         .past-2 { border-left-color: #10b981; }
         .past-3 { border-left-color: #059669; }
         .past-4 { border-left-color: #047857; }
-        
         .future-1 { border-left-color: #a78bfa; }
         .future-2 { border-left-color: #8b5cf6; }
         .future-3 { border-left-color: #7c3aed; }
         .future-4 { border-left-color: #6d28d9; }
 
-        .grammar-terms {
-            background: #1e293b;
-            border-radius: 12px;
-            padding: 2rem;
-            margin-top: 2rem;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-            border: 1px solid #334155;
+        /* Quick Reference Grid */
+        .quick-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
         }
 
-        .grammar-terms h3 {
-            color: #67e8f9;
-            font-size: 1.75rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .term-card {
-            background: #0f172a;
+        .quick-card {
+            background: var(--bg-primary);
             padding: 1.5rem;
             border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .quick-card h4 {
+            color: var(--accent-cyan);
             margin-bottom: 1rem;
-            border: 1px solid #334155;
         }
 
-        .term-card h4 {
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .term-1 h4 { color: #34d399; }
-        .term-2 h4 { color: #a78bfa; }
-        .term-3 h4 { color: #fbbf24; }
-        .term-4 h4 { color: #fb7185; }
-        .term-5 h4 { color: #2dd4bf; }
-
-        .term-card p {
-            color: #cbd5e1;
-            margin-bottom: 0.5rem;
-            line-height: 1.6;
-        }
-
-        .term-card .example-text {
-            color: #22d3ee;
-            font-family: 'Courier New', monospace;
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
             font-size: 0.9rem;
         }
 
-        .term-card .note {
-            color: #94a3b8;
-            font-size: 0.875rem;
-            margin-top: 0.5rem;
-        }
-
+        /* Responsive Design */
         @media (max-width: 768px) {
-            body {
-                padding: 1rem;
+            .menu-toggle {
+                display: block;
             }
-            
-            .header-title h1 {
-                font-size: 1.5rem;
+
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                margin-top: 1rem;
             }
-            
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+
+            main {
+                padding: 5rem 1rem 1rem;
+            }
+
             .tense-grid {
                 grid-template-columns: 1fr;
             }
+
+            table {
+                font-size: 0.85rem;
+            }
+
+            th, td {
+                padding: 0.75rem;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            nav {
+                display: none;
+            }
+
+            body {
+                background: white;
+                color: black;
+            }
+
+            .content-card, .section-header, .tense-card {
+                break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ccc;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Highlight important notes */
+        .note-box {
+            background: rgba(34, 211, 238, 0.1);
+            border-left: 3px solid var(--accent-cyan);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .warning-box {
+            background: rgba(251, 113, 133, 0.1);
+            border-left: 3px solid #fb7185;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .success-box {
+            background: rgba(52, 211, 153, 0.1);
+            border-left: 3px solid var(--accent-green);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="header-title">
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-brand">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
                     <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
                 </svg>
-                <h1>English Tenses Master Guide</h1>
+                IELTS Guide
             </div>
-            <p>Complete reference for IELTS Writing & Speaking excellence</p>
-        </div>
-
-        <div class="tense-card present-1">
-            <h2>Simple Present</h2>
-            <div class="tense-grid">
-                <div class="tense-section structure">
-                    <h3>Structure</h3>
-                    <p>Subject + base verb (+ s/es for 3rd person singular)</p>
-                </div>
-                <div class="tense-section timeline">
-                    <h3>Time Reference</h3>
-                    <p class="timeline-desc">Habitual/Repeated Actions & Universal Truths</p>
-                    <p class="timeline-visual">⟲ NOW ⟲</p>
-                </div>
-                <div class="tense-section example">
-                    <h3>Example Sentence</h3>
-                    <p>"She works at a hospital every weekday."</p>
-                </div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <div class="nav-links" id="navLinks">
+                <a href="#writing-task-1">Writing Task 1</a>
+                <a href="#writing-task-2">Writing Task 2</a>
+                <a href="#speaking-part-1">Speaking Part 1</a>
+                <a href="#speaking-part-2">Speaking Part 2</a>
+                <a href="#speaking-part-3">Speaking Part 3</a>
+                <a href="#tenses">English Tenses</a>
+                <a href="#quick-reference">Quick Reference</a>
             </div>
         </div>
+    </nav>
 
-        <div class="tense-card present-2">
-            <h2>Present Continuous</h2>
-            <div class="tense-grid">
-                <div class="tense-section structure">
-                    <h3>Structure</h3>
-                    <p>Subject + am/is/are + present participle</p>
-                </div>
-                <div class="tense-section timeline">
-                    <h3>Time Reference</h3>
-                    <p class="timeline-desc">Actions Happening at This Moment</p>
-                    <p class="timeline-visual">← NOW →</p>
-                </div>
-                <div class="tense-section example">
-                    <h3>Example Sentence</h3>
-                    <p>"I am preparing for my IELTS exam this month."</p>
-                </div>
-            </div>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>IELTS Academic Complete Guide</h1>
+            <p>Your comprehensive cheat sheet for IELTS Writing & Speaking excellence. Everything you need to achieve Band 7+ in one place.</p>
         </div>
 
-        <div class="tense-card present-3">
-            <h2>Present Perfect</h2>
-            <div class="tense-grid">
-                <div class="tense-section structure">
-                    <h3>Structure</h3>
-                    <p>Subject + have/has + past participle</p>
-                </div>
-                <div class="tense-section timeline">
-                    <h3>Time Reference</h3>
-                    <p class="timeline-desc">Past Action Connected to Present (Unspecified Time)</p>
-                    <p class="timeline-visual">PAST ═══▶ NOW</p>
-                </div>
-                <div class="tense-section example">
-                    <h3>Example Sentence</h3>
-                    <p>"I have studied English for five years."</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="tense-card present-4">
-            <h2>Present Perfect Continuous</h2>
-            <div class="tense-grid">
-                <div class="tense-section structure">
-                    <h3>Structure</h3>
-                    <p>Subject + have/has been + present participle</p>
-                </div>
-                <div class="tense-section timeline">
-                    <h3>Time Reference</h3>
-                    <p class="timeline-desc">Ongoing Action with Duration (Past → Present)</p>
-                    <p class="timeline-visual">PAST ≈≈≈▶ NOW</p>
-                </div>
-                <div class="tense-section example">
-                    <h3>Example Sentence</h3>
-                    <p>"They have been living in London since 2020."</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="tense-card past-1">
-            <h2>Simple Past</h2>
-            <div class="tense-grid">
-                <div class="tense-section structure">
-                    <h3>Structure</h3>
-                    <p>Subject + past verb (regular: base + ed, or irregular form)</p>
-                </div>
-                <div class="tense-section timeline">
-                    <h3>Time Reference</h3>
-                    <p class="timeline-desc">Completed Action at Specific Past Time</p>
-                    <p class="timeline-visual">● PAST | now</p>
-                </div>
-                <div class="tense-section example">
-                    <h3>Example Sentence</h3>
-                    <p>"I took the IELTS mock exam last year."</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="tense-card past-2">
-            <h2>Past Continuous</h2>
-            <div class="tense-grid">
-                <div class="tense-section structure">
-                    <h3>Structure</h3>
-                    <p>Subject + was/were + present participle</p>
-                </div>
-                <div class="tense-section timeline">
-                    <h3>Time Reference</h3>
-                    <p class="timeline-desc">Action in Progress at a Past Moment</p>
-                    <p class="timeline-visual">PAST ← ● → | now</p>
-                </div>
-                <div class="tense-section example">
-                    <h3>Example Sentence</h3>
-                    <p>"I was studying when she called me yesterday."</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="tense-card past-3">
-            <h2>Past Perfect</h2>
-            <div class="tense-grid">
-                <div class="tense-section structure">
-                    <h3>Structure</h3>
-                    <p>Subject + had + past participle</p>
-                </div>
-                <div class="tense-section timeline">
-                    <h3>Time Reference</h3>
-                    <p class="timeline-desc">Earlier Past Action Before Another Past Action</p>
-                    <p class="timeline-visual">● EARLIER → ● PAST | now</p>
-                </div>
-                <div class="tense-section example">
-                    <h3>Example Sentence</h3>
-                    <p>"I had finished my homework before dinner started."</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="tense-card past-4">
-            <h2>Past Perfect Continuous</h2>
-            <div class="tense-grid">
-                <div class="tense-section structure">
-                    <h3>Structure</h3>
-                    <p>Subject + had been + present participle</p>
-                </div>
-                <div class="tense-section timeline">
-                    <h3>Time Reference</h3>
-                    <p class="timeline-desc">Duration of Action Before Past Moment</p>
-                    <p class="timeline-visual">EARLIER ≈≈≈▶ ● PAST | now</p>
-                </div>
-                <div class="tense-section example">
-                    <h3>Example Sentence</h3>
-                    <p>"She had been working there for two years before she quit."</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="tense-card future-1">
-            <h2>Simple Future (will)</h2>
-            <div class="tense-grid">
-                <div class="tense-section structure">
-                    <h3>Structure</h3>
-                    <p>Subject + will + base verb</p>
-                </div>
-                <div class="tense-section timeline">
-                    <h3>Time Reference</h3>
-                    <p class="timeline-desc">Predictions, Spontaneous Decisions, Promises</p>
-                    <p class="timeline-visual">now | ● FUTURE</p>
-                </div>
-                <div class="tense-section example">
-                    <h3>Example Sentence</h3>
-                    <p>"I will take the IELTS exam on November 20th."</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="tense-card future-2">
-            <h2>Simple Future (going to)</h2>
-            <div class="tense-grid">
-                <div class="tense-section structure">
-                    <h3>Structure</h3>
-                    <p>Subject + am/is/are going to + base verb</p>
-                </div>
-                <div class="tense-section timeline">
-                    <h3>Time Reference</h3>
-                    <p class="timeline-desc">Planned Actions, Intentions, Clear Evidence</p>
-                    <p class="timeline-visual">now | ● FUTURE</p>
-                </div>
-                <div class="tense-section example">
-                    <h3>Example Sentence</h3>
-                    <p>"I am going to study grammar tonight."</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="tense-card future-3">
-            <h2>Future Continuous</h2>
-            <div class="tense-grid">
-                <div class="tense-section structure">
-                    <h3>Structure</h3>
-                    <p>Subject + will be + present participle</p>
-                </div>
-                <div class="tense-section timeline">
-                    <h3>Time Reference</h3>
-                    <p class="timeline-desc">Action in Progress at Future Time</p>
-                    <p class="timeline-visual">now | ← ● → FUTURE</p>
-                </div>
-                <div class="tense-section example">
-                    <h3>Example Sentence</h3>
-                    <p>"This time next week, I will be taking my IELTS exam."</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="tense-card future-4">
-            <h2>Future Perfect</h2>
-            <div class="tense-grid">
-                <div class="tense-section structure">
-                    <h3>Structure</h3>
-                    <p>Subject + will have + past participle</p>
-                </div>
-                <div class="tense-section timeline">
-                    <h3>Time Reference</h3>
-                    <p class="timeline-desc">Action Completed Before Future Point</p>
-                    <p class="timeline-visual">now ═══▶ ● FUTURE</p>
-                </div>
-                <div class="tense-section example">
-                    <h3>Example Sentence</h3>
-                    <p>"By December, I will have completed my IELTS exam."</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="tense-card future-4">
-            <h2>Future Perfect Continuous</h2>
-            <div class="tense-grid">
-                <div class="tense-section structure">
-                    <h3>Structure</h3>
-                    <p>Subject + will have been + present participle</p>
-                </div>
-                <div class="tense-section timeline">
-                    <h3>Time Reference</h3>
-                    <p class="timeline-desc">Duration Until Future Point</p>
-                    <p class="timeline-visual">now ≈≈≈▶ ● FUTURE</p>
-                </div>
-                <div class="tense-section example">
-                    <h3>Example Sentence</h3>
-                    <p>"By next month, I will have been studying English for six years."</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="grammar-terms">
-            <h3>Grammar Terms Explained</h3>
-            
-            <div class="term-card term-1">
-                <h4>Base Verb (Infinitive without "to")</h4>
-                <p>The simplest form of a verb, without any tense or conjugation.</p>
-                <p class="example-text">Examples: work, study, go, eat, write</p>
+        <!-- Writing Task 1 -->
+        <section id="writing-task-1">
+            <div class="section-header">
+                <h2>Writing Task 1</h2>
+                <p><span class="badge badge-time">20 minutes</span><span class="badge badge-words">150+ words</span></p>
             </div>
 
-            <div class="term-card term-2">
-                <h4>Past Participle</h4>
-                <p>The verb form used with perfect tenses and passive voice. For regular verbs, add -ed. Irregular verbs have unique forms.</p>
-                <p class="example-text">Regular: worked, studied, played</p>
-                <p class="example-text">Irregular: gone, written, taken, eaten, been</p>
+            <div class="content-card">
+                <h3>Structure (4 Paragraphs - NO Conclusion)</h3>
+                <ol>
+                    <li><strong>Introduction</strong> - Paraphrase the question (20-30 words)</li>
+                    <li><strong>Overview</strong> - Main trends, NO specific data (30-40 words) ⭐ MOST IMPORTANT</li>
+                    <li><strong>Body 1</strong> - Detailed analysis with data (50-70 words)</li>
+                    <li><strong>Body 2</strong> - More detailed analysis with data (50-70 words)</li>
+                </ol>
             </div>
 
-            <div class="term-card term-3">
-                <h4>Present Participle</h4>
-                <p>The verb form ending in -ing, used in continuous tenses. Always formed by adding -ing to the base verb.</p>
-                <p class="example-text">Examples: working, studying, going, eating, writing</p>
+            <div class="content-card">
+                <h3>Essential Collocations</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Function</th>
+                            <th>Key Phrases</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Increases</strong></td>
+                            <td>experience/witness a dramatic rise, soar to, climb steadily, reach a peak of</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Decreases</strong></td>
+                            <td>show a marked decline, plummet to, drop steadily, reach a low of</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Stability</strong></td>
+                            <td>remain stable, level off at, show minimal variation, fluctuate slightly</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Comparisons</strong></td>
+                            <td>significantly higher/lower than, roughly equal to, twice as much as</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Overview starters</strong></td>
+                            <td>Overall, it is clear that..., The most striking feature is..., What stands out is...</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Proportions</strong></td>
+                            <td>account for X%, constitute a significant proportion, dominate the market</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Time references</strong></td>
+                            <td>at the beginning of the period, by the end, throughout the timeframe, from X onwards</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
 
-            <div class="term-card term-4">
-                <h4>Gerund</h4>
-                <p>A verb ending in -ing that functions as a noun. While identical in form to the present participle, gerunds name activities or states.</p>
-                <p class="example-text">Examples: "Swimming is healthy." / "I enjoy reading."</p>
-                <p class="note">Note: In "I am swimming," swimming is a present participle (part of present continuous). In "Swimming is fun," swimming is a gerund (acting as a noun).</p>
+            <div class="content-card">
+                <h3>Critical Rules</h3>
+                <div class="success-box">
+                    <p><span class="check">✅</span> Overview is MANDATORY (worth 25% of score)</p>
+                    <p><span class="check">✅</span> NO conclusion paragraph</p>
+                    <p><span class="check">✅</span> Use past tense for completed periods, present for current data</p>
+                </div>
+                <div class="warning-box">
+                    <p><span class="cross">❌</span> Never repeat the introduction at the end</p>
+                    <p><span class="cross">❌</span> No personal opinions or speculation</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Writing Task 2 -->
+        <section id="writing-task-2">
+            <div class="section-header">
+                <h2>Writing Task 2</h2>
+                <p><span class="badge badge-time">40 minutes</span><span class="badge badge-words">250+ words</span></p>
             </div>
 
-            <div class="term-card term-5">
-                <h4>Auxiliary Verbs (Helping Verbs)</h4>
-                <p>Verbs that help form tenses, questions, and negatives. They combine with main verbs.</p>
-                <p class="example-text">Common auxiliaries: am, is, are, was, were, have, has, had, will, would, shall</p>
+            <div class="content-card">
+                <h3>Structure (4 Paragraphs)</h3>
+                <ol>
+                    <li><strong>Introduction</strong> - Paraphrase + Thesis statement (40-50 words)</li>
+                    <li><strong>Body 1</strong> - Main argument with P.E.E.L. (80-100 words)</li>
+                    <li><strong>Body 2</strong> - Second argument with P.E.E.L. (80-100 words)</li>
+                    <li><strong>Conclusion</strong> - Summarize + restate position (40-50 words)</li>
+                </ol>
             </div>
-        </div>
-    </div>
+
+            <div class="content-card">
+                <h3>Four Essay Types</h3>
+
+                <h4>1. Opinion (Agree/Disagree)</h4>
+                <ul>
+                    <li>Clear position in introduction</li>
+                    <li>2 body paragraphs supporting your view</li>
+                    <li>Restate position in conclusion</li>
+                </ul>
+
+                <h4>2. Discussion (Both Views)</h4>
+                <ul>
+                    <li>¶2: First viewpoint</li>
+                    <li>¶3: Second viewpoint + your opinion</li>
+                    <li>Show which side you support</li>
+                </ul>
+
+                <h4>3. Advantages/Disadvantages</h4>
+                <ul>
+                    <li>¶2: Advantages (2-3 points)</li>
+                    <li>¶3: Disadvantages (2-3 points)</li>
+                    <li>State which outweighs (if asked)</li>
+                </ul>
+
+                <h4>4. Problem-Solution</h4>
+                <ul>
+                    <li>¶2: Problems (2 problems with explanations)</li>
+                    <li>¶3: Solutions (2 solutions with expected outcomes)</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h3>P.E.E.L. Body Paragraph Structure</h3>
+                <ul>
+                    <li><strong>P</strong>oint - Topic sentence</li>
+                    <li><strong>E</strong>xplain - Develop the idea</li>
+                    <li><strong>E</strong>xample - Specific evidence</li>
+                    <li><strong>L</strong>ink - Connect back to thesis</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h3>Essential Collocations</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Function</th>
+                            <th>Phrases</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Arguments</strong></td>
+                            <td>compelling argument, widely accepted, hotly debated issue, strongly advocate</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Trends</strong></td>
+                            <td>undergo dramatic changes, witness a sharp increase, gain widespread popularity</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cause/Effect</strong></td>
+                            <td>directly contribute to, stem from, have far-reaching implications, trigger concern</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Solutions</strong></td>
+                            <td>tackle the problem, implement effective measures, viable solution, sustainable approach</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Advantages</strong></td>
+                            <td>substantial benefits, outweigh the drawbacks, reap the benefits</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Academic tone</strong></td>
+                            <td>empirical evidence suggests, convincingly demonstrate, merit serious consideration</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="content-card">
+                <h3>Linking Words</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Purpose</th>
+                            <th>Words</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Adding</strong></td>
+                            <td>Furthermore, Moreover, Additionally, What is more</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Contrasting</strong></td>
+                            <td>However, Nevertheless, On the other hand, Conversely</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Examples</strong></td>
+                            <td>For instance, To illustrate, A case in point is</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cause</strong></td>
+                            <td>Due to, Owing to, As a result of</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Effect</strong></td>
+                            <td>Consequently, Therefore, Thus, Hence</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Emphasizing</strong></td>
+                            <td>Indeed, Undoubtedly, Particularly, Especially</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="content-card">
+                <h3>Critical Rules</h3>
+                <div class="success-box">
+                    <p><span class="check">✅</span> Clear position throughout</p>
+                    <p><span class="check">✅</span> Well-developed arguments with examples</p>
+                    <p><span class="check">✅</span> 250+ words (aim for 270-280)</p>
+                    <p><span class="check">✅</span> Academic tone (no contractions, slang)</p>
+                </div>
+                <div class="warning-box">
+                    <p><span class="cross">❌</span> No personal examples ("I went to Paris...")</p>
+                    <p><span class="cross">❌</span> No memorized essays</p>
+                    <p><span class="cross">❌</span> Must address ALL parts of question</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Speaking Part 1 -->
+        <section id="speaking-part-1">
+            <div class="section-header">
+                <h2>Speaking Part 1</h2>
+                <p><span class="badge badge-time">4-5 minutes</span></p>
+            </div>
+
+            <div class="content-card">
+                <h3>Structure</h3>
+                <ul>
+                    <li>Introduction (30 seconds)</li>
+                    <li>3 topic sets with 3-4 questions each</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h3>D.E.E. Answer Formula (15-25 seconds)</h3>
+                <ol>
+                    <li><strong>D</strong>irect answer (1 sentence)</li>
+                    <li><strong>E</strong>xtend with details/reasons (1-2 sentences)</li>
+                    <li><strong>E</strong>xample or extra thought (1-2 sentences)</li>
+                </ol>
+
+                <div class="note-box">
+                    <h5>Example</h5>
+                    <p><strong>Q: "Do you enjoy cooking?"</strong></p>
+                    <p><em>"Yes, I really enjoy cooking, especially on weekends when I have more time. I find it quite therapeutic and it allows me to experiment with different Persian and international dishes. Just last week, I tried making homemade pasta for the first time, and it turned out surprisingly well."</em></p>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3>Essential Phrases</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Purpose</th>
+                            <th>Expressions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Likes</strong></td>
+                            <td>I'm really into, passionate about, quite keen on, fond of</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Dislikes</strong></td>
+                            <td>not particularly fond of, not really a fan of, not my cup of tea</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Frequency</strong></td>
+                            <td>on a daily basis, every now and then, once in a blue moon, as often as I can</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Reasons</strong></td>
+                            <td>The main reason is..., This is partly because..., One reason why...</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Changes</strong></td>
+                            <td>It's changed dramatically, evolved considerably, not as... as it used to be</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="content-card">
+                <h3>Common Mistakes to Avoid</h3>
+                <div class="warning-box">
+                    <p><span class="cross">❌</span> One-word answers</p>
+                    <p><span class="cross">❌</span> Memorized speeches</p>
+                    <p><span class="cross">❌</span> Over-thinking (respond naturally)</p>
+                    <p><span class="cross">❌</span> Going off-topic</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Speaking Part 2 -->
+        <section id="speaking-part-2">
+            <div class="section-header">
+                <h2>Speaking Part 2</h2>
+                <p><span class="badge badge-time">3-4 minutes</span></p>
+            </div>
+
+            <div class="content-card">
+                <h3>Timing</h3>
+                <ul>
+                    <li><strong>1 minute</strong> - Preparation (write keywords only)</li>
+                    <li><strong>2 minutes</strong> - Speaking (monologue)</li>
+                    <li><strong>30 seconds</strong> - Rounding off questions</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h3>Speech Structure</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Section</th>
+                            <th>Time</th>
+                            <th>Content</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Introduction</td>
+                            <td>10-15 sec</td>
+                            <td>Brief opening</td>
+                        </tr>
+                        <tr>
+                            <td>Bullet 1</td>
+                            <td>20-25 sec</td>
+                            <td>First point with details</td>
+                        </tr>
+                        <tr>
+                            <td>Bullet 2</td>
+                            <td>20-25 sec</td>
+                            <td>Second point with details</td>
+                        </tr>
+                        <tr>
+                            <td>Bullet 3</td>
+                            <td>20-25 sec</td>
+                            <td>Third point with details</td>
+                        </tr>
+                        <tr>
+                            <td>Explain part</td>
+                            <td>30-40 sec</td>
+                            <td>Final bullet (why/how/feelings)</td>
+                        </tr>
+                        <tr>
+                            <td>Conclusion</td>
+                            <td>10-15 sec</td>
+                            <td>Brief summary (optional)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="content-card">
+                <h3>Preparation Notes Example</h3>
+                <p><strong>Topic:</strong> Describe a skill you'd like to learn</p>
+                <pre><code>• What: Python/AI programming
+• How: Online courses, practice, Claude
+• Why: Career development, personal interest
+• Useful: Better DevOps, automation, jobs
+Examples: ML apps, automate tasks</code></pre>
+            </div>
+
+            <div class="content-card">
+                <h3>Opening & Transition Phrases</h3>
+                <h4>Opening Phrases</h4>
+                <ul>
+                    <li>"I'd like to talk about..."</li>
+                    <li>"The person/place I'm going to describe is..."</li>
+                    <li>"I'm going to tell you about a time when..."</li>
+                </ul>
+
+                <h4>Transition Phrases</h4>
+                <ul>
+                    <li>Moving on to...</li>
+                    <li>As for...</li>
+                    <li>Regarding...</li>
+                    <li>When it comes to...</li>
+                    <li>Another thing worth mentioning is...</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h3>Extension Techniques</h3>
+                <ol>
+                    <li><strong>Describe in detail</strong> - "absolutely captivating, with bustling markets..."</li>
+                    <li><strong>Add feelings</strong> - "What I particularly appreciate is..."</li>
+                    <li><strong>Give specific examples</strong> - "For instance, I learned how to..."</li>
+                    <li><strong>Make comparisons</strong> - "Unlike traditional methods..."</li>
+                    <li><strong>Discuss past/present/future</strong> - "Initially... now... in the future..."</li>
+                </ol>
+            </div>
+
+            <div class="content-card">
+                <h3>Essential Collocations</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Phrases</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>People</strong></td>
+                            <td>warm-hearted, down-to-earth, remarkably patient, close bond</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Places</strong></td>
+                            <td>bustling atmosphere, breathtaking views, conveniently located, lasting impression</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Events</strong></td>
+                            <td>eye-opening experience, memorable occasion, thoroughly enjoyed, changed my perspective</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Skills</strong></td>
+                            <td>steep learning curve, constant practice, highly beneficial, master the fundamentals</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="content-card">
+                <h3>Critical Rules</h3>
+                <div class="success-box">
+                    <p><span class="check">✅</span> Address ALL bullet points</p>
+                    <p><span class="check">✅</span> Speak for full 2 minutes</p>
+                    <p><span class="check">✅</span> Use specific examples and details</p>
+                </div>
+                <div class="warning-box">
+                    <p><span class="cross">❌</span> Don't write full sentences in notes</p>
+                    <p><span class="cross">❌</span> Don't memorize speeches</p>
+                    <p><span class="cross">❌</span> Don't stop at 1 minute</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Speaking Part 3 -->
+        <section id="speaking-part-3">
+            <div class="section-header">
+                <h2>Speaking Part 3</h2>
+                <p><span class="badge badge-time">4-5 minutes</span></p>
+            </div>
+
+            <div class="content-card">
+                <h3>Nature</h3>
+                <ul>
+                    <li>Abstract, analytical discussion</li>
+                    <li>5-7 questions</li>
+                    <li>40-60 seconds per answer</li>
+                    <li>Tests critical thinking</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h3>I.R.E.E.C. Answer Structure</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Element</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>I</strong> - Initial response</td>
+                            <td>Direct answer (I believe..., In my view...)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>R</strong> - Reason 1</td>
+                            <td>First supporting argument</td>
+                        </tr>
+                        <tr>
+                            <td><strong>E</strong> - Example</td>
+                            <td>Specific evidence or example</td>
+                        </tr>
+                        <tr>
+                            <td><strong>E</strong> - Extend</td>
+                            <td>Additional perspective/reason 2</td>
+                        </tr>
+                        <tr>
+                            <td><strong>C</strong> - Concession/Conclusion</td>
+                            <td>Acknowledge other views or conclude</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="content-card">
+                <h3>Question Types</h3>
+
+                <h4>1. Opinion</h4>
+                <p><em>"Do you think technology has made life easier?"</em></p>
+                <p>Structure: Opinion + Reason 1 + Reason 2 + Contrasting view + Overall</p>
+
+                <h4>2. Comparison</h4>
+                <p><em>"How has education changed?"</em></p>
+                <p>Structure: Past situation + Present + Reasons + Impact</p>
+
+                <h4>3. Future/Prediction</h4>
+                <p><em>"How will AI affect jobs?"</em></p>
+                <p>Structure: Current trend + Future possibility 1 + Possibility 2 + Uncertainty</p>
+
+                <h4>4. Problem-Solution</h4>
+                <p><em>"What can reduce traffic congestion?"</em></p>
+                <p>Structure: Problem + Government solution + Individual solution + Challenges</p>
+            </div>
+
+            <div class="content-card">
+                <h3>Essential Vocabulary</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Purpose</th>
+                            <th>Phrases</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Opinions</strong></td>
+                            <td>I'm firmly convinced, I tend to think, It seems to me, On balance</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Causes</strong></td>
+                            <td>The primary cause is, This stems from, Can be attributed to, A combination of factors</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Comparisons</strong></td>
+                            <td>In contrast to, Considerably more, Whereas X focuses on, By contrast</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Trends</strong></td>
+                            <td>Growing trend toward, Increasingly prevalent, Gradually disappearing, Undergone transformation</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Adding points</strong></td>
+                            <td>Furthermore, What's more, Beyond that, In addition</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Contrasting</strong></td>
+                            <td>On the other hand, Having said that, Conversely, Then again</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Acknowledging</strong></td>
+                            <td>Admittedly, I should acknowledge, To be fair, Granted</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Future</strong></td>
+                            <td>In all likelihood, It's quite likely, It's conceivable, It remains to be seen</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="content-card">
+                <h3>Advanced Grammar for Band 8+</h3>
+
+                <h4>Conditionals:</h4>
+                <ul>
+                    <li>"If governments invested more, we'd see reduced inequality."</li>
+                    <li>"If technology hadn't advanced, we might not face these challenges."</li>
+                </ul>
+
+                <h4>Passive Voice:</h4>
+                <ul>
+                    <li>"This can be attributed to several factors..."</li>
+                    <li>"These policies have been implemented successfully..."</li>
+                </ul>
+
+                <h4>Relative Clauses:</h4>
+                <ul>
+                    <li>"People who grow up bilingual, which is increasingly common, often demonstrate enhanced flexibility."</li>
+                </ul>
+
+                <h4>Cleft Sentences:</h4>
+                <ul>
+                    <li>"What concerns me most is the growing inequality..."</li>
+                    <li>"It's the lack of political will that prevents change."</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h3>Handling Difficult Questions</h3>
+
+                <h4>Buy time:</h4>
+                <ul>
+                    <li>"That's an interesting question. Let me think..."</li>
+                    <li>"That's quite a complex issue..."</li>
+                    <li>"That's thought-provoking..."</li>
+                </ul>
+
+                <h4>Acknowledge complexity:</h4>
+                <ul>
+                    <li>"This is a multifaceted issue with no simple answer..."</li>
+                    <li>"There are various perspectives on this..."</li>
+                </ul>
+
+                <h4>Use hedging:</h4>
+                <ul>
+                    <li>Tend to, generally, typically, often, probably</li>
+                    <li>Many, some, certain</li>
+                    <li>To some extent, to a degree</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h3>Common Mistakes</h3>
+                <div class="warning-box">
+                    <p><span class="cross">❌</span> Personal examples only → Use societal analysis</p>
+                    <p><span class="cross">❌</span> Short answers (15 sec) → Aim for 40-60 seconds</p>
+                    <p><span class="cross">❌</span> Agreeing with everything → Show balanced views</p>
+                    <p><span class="cross">❌</span> Too casual → Use academic vocabulary</p>
+                    <p><span class="cross">❌</span> "I think" repeatedly → Vary expressions</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- English Tenses -->
+        <section id="tenses">
+            <div class="section-header">
+                <h2>English Tenses Master Guide</h2>
+                <p>Essential grammar reference for IELTS Writing & Speaking</p>
+            </div>
+
+            <!-- Present Tenses -->
+            <div class="tense-card present-1">
+                <h3>Simple Present</h3>
+                <div class="tense-grid">
+                    <div class="tense-section structure">
+                        <h4>Structure</h4>
+                        <p>Subject + base verb (+ s/es for 3rd person singular)</p>
+                    </div>
+                    <div class="tense-section timeline">
+                        <h4>Time Reference</h4>
+                        <p>Habitual/Repeated Actions & Universal Truths</p>
+                        <p class="timeline-visual">⟲ NOW ⟲</p>
+                    </div>
+                    <div class="tense-section example">
+                        <h4>Example</h4>
+                        <p>"She works at a hospital every weekday."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tense-card present-2">
+                <h3>Present Continuous</h3>
+                <div class="tense-grid">
+                    <div class="tense-section structure">
+                        <h4>Structure</h4>
+                        <p>Subject + am/is/are + present participle</p>
+                    </div>
+                    <div class="tense-section timeline">
+                        <h4>Time Reference</h4>
+                        <p>Actions Happening at This Moment</p>
+                        <p class="timeline-visual">← NOW →</p>
+                    </div>
+                    <div class="tense-section example">
+                        <h4>Example</h4>
+                        <p>"I am preparing for my IELTS exam this month."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tense-card present-3">
+                <h3>Present Perfect</h3>
+                <div class="tense-grid">
+                    <div class="tense-section structure">
+                        <h4>Structure</h4>
+                        <p>Subject + have/has + past participle</p>
+                    </div>
+                    <div class="tense-section timeline">
+                        <h4>Time Reference</h4>
+                        <p>Past Action Connected to Present (Unspecified Time)</p>
+                        <p class="timeline-visual">PAST ═══▶ NOW</p>
+                    </div>
+                    <div class="tense-section example">
+                        <h4>Example</h4>
+                        <p>"I have studied English for five years."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tense-card present-4">
+                <h3>Present Perfect Continuous</h3>
+                <div class="tense-grid">
+                    <div class="tense-section structure">
+                        <h4>Structure</h4>
+                        <p>Subject + have/has been + present participle</p>
+                    </div>
+                    <div class="tense-section timeline">
+                        <h4>Time Reference</h4>
+                        <p>Ongoing Action with Duration (Past → Present)</p>
+                        <p class="timeline-visual">PAST ≈≈≈▶ NOW</p>
+                    </div>
+                    <div class="tense-section example">
+                        <h4>Example</h4>
+                        <p>"They have been living in London since 2020."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Past Tenses -->
+            <div class="tense-card past-1">
+                <h3>Simple Past</h3>
+                <div class="tense-grid">
+                    <div class="tense-section structure">
+                        <h4>Structure</h4>
+                        <p>Subject + past verb (regular: base + ed, or irregular form)</p>
+                    </div>
+                    <div class="tense-section timeline">
+                        <h4>Time Reference</h4>
+                        <p>Completed Action at Specific Past Time</p>
+                        <p class="timeline-visual">● PAST | now</p>
+                    </div>
+                    <div class="tense-section example">
+                        <h4>Example</h4>
+                        <p>"I took the IELTS mock exam last year."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tense-card past-2">
+                <h3>Past Continuous</h3>
+                <div class="tense-grid">
+                    <div class="tense-section structure">
+                        <h4>Structure</h4>
+                        <p>Subject + was/were + present participle</p>
+                    </div>
+                    <div class="tense-section timeline">
+                        <h4>Time Reference</h4>
+                        <p>Action in Progress at a Past Moment</p>
+                        <p class="timeline-visual">PAST ← ● → | now</p>
+                    </div>
+                    <div class="tense-section example">
+                        <h4>Example</h4>
+                        <p>"I was studying when she called me yesterday."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tense-card past-3">
+                <h3>Past Perfect</h3>
+                <div class="tense-grid">
+                    <div class="tense-section structure">
+                        <h4>Structure</h4>
+                        <p>Subject + had + past participle</p>
+                    </div>
+                    <div class="tense-section timeline">
+                        <h4>Time Reference</h4>
+                        <p>Earlier Past Action Before Another Past Action</p>
+                        <p class="timeline-visual">● EARLIER → ● PAST | now</p>
+                    </div>
+                    <div class="tense-section example">
+                        <h4>Example</h4>
+                        <p>"I had finished my homework before dinner started."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tense-card past-4">
+                <h3>Past Perfect Continuous</h3>
+                <div class="tense-grid">
+                    <div class="tense-section structure">
+                        <h4>Structure</h4>
+                        <p>Subject + had been + present participle</p>
+                    </div>
+                    <div class="tense-section timeline">
+                        <h4>Time Reference</h4>
+                        <p>Duration of Action Before Past Moment</p>
+                        <p class="timeline-visual">EARLIER ≈≈≈▶ ● PAST | now</p>
+                    </div>
+                    <div class="tense-section example">
+                        <h4>Example</h4>
+                        <p>"She had been working there for two years before she quit."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Future Tenses -->
+            <div class="tense-card future-1">
+                <h3>Simple Future (will)</h3>
+                <div class="tense-grid">
+                    <div class="tense-section structure">
+                        <h4>Structure</h4>
+                        <p>Subject + will + base verb</p>
+                    </div>
+                    <div class="tense-section timeline">
+                        <h4>Time Reference</h4>
+                        <p>Predictions, Spontaneous Decisions, Promises</p>
+                        <p class="timeline-visual">now | ● FUTURE</p>
+                    </div>
+                    <div class="tense-section example">
+                        <h4>Example</h4>
+                        <p>"I will take the IELTS exam on November 20th."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tense-card future-2">
+                <h3>Simple Future (going to)</h3>
+                <div class="tense-grid">
+                    <div class="tense-section structure">
+                        <h4>Structure</h4>
+                        <p>Subject + am/is/are going to + base verb</p>
+                    </div>
+                    <div class="tense-section timeline">
+                        <h4>Time Reference</h4>
+                        <p>Planned Actions, Intentions, Clear Evidence</p>
+                        <p class="timeline-visual">now | ● FUTURE</p>
+                    </div>
+                    <div class="tense-section example">
+                        <h4>Example</h4>
+                        <p>"I am going to study grammar tonight."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tense-card future-3">
+                <h3>Future Continuous</h3>
+                <div class="tense-grid">
+                    <div class="tense-section structure">
+                        <h4>Structure</h4>
+                        <p>Subject + will be + present participle</p>
+                    </div>
+                    <div class="tense-section timeline">
+                        <h4>Time Reference</h4>
+                        <p>Action in Progress at Future Time</p>
+                        <p class="timeline-visual">now | ← ● → FUTURE</p>
+                    </div>
+                    <div class="tense-section example">
+                        <h4>Example</h4>
+                        <p>"This time next week, I will be taking my IELTS exam."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tense-card future-4">
+                <h3>Future Perfect</h3>
+                <div class="tense-grid">
+                    <div class="tense-section structure">
+                        <h4>Structure</h4>
+                        <p>Subject + will have + past participle</p>
+                    </div>
+                    <div class="tense-section timeline">
+                        <h4>Time Reference</h4>
+                        <p>Action Completed Before Future Point</p>
+                        <p class="timeline-visual">now ═══▶ ● FUTURE</p>
+                    </div>
+                    <div class="tense-section example">
+                        <h4>Example</h4>
+                        <p>"By December, I will have completed my IELTS exam."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tense-card future-4">
+                <h3>Future Perfect Continuous</h3>
+                <div class="tense-grid">
+                    <div class="tense-section structure">
+                        <h4>Structure</h4>
+                        <p>Subject + will have been + present participle</p>
+                    </div>
+                    <div class="tense-section timeline">
+                        <h4>Time Reference</h4>
+                        <p>Duration Until Future Point</p>
+                        <p class="timeline-visual">now ≈≈≈▶ ● FUTURE</p>
+                    </div>
+                    <div class="tense-section example">
+                        <h4>Example</h4>
+                        <p>"By next month, I will have been studying English for six years."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grammar Terms -->
+            <div class="content-card">
+                <h3>Grammar Terms Explained</h3>
+
+                <div class="quick-card">
+                    <h4>Base Verb (Infinitive without "to")</h4>
+                    <p>The simplest form of a verb, without any tense or conjugation.</p>
+                    <p class="formula">Examples: work, study, go, eat, write</p>
+                </div>
+
+                <div class="quick-card">
+                    <h4>Past Participle</h4>
+                    <p>The verb form used with perfect tenses and passive voice. For regular verbs, add -ed. Irregular verbs have unique forms.</p>
+                    <p class="formula">Regular: worked, studied, played</p>
+                    <p class="formula">Irregular: gone, written, taken, eaten, been</p>
+                </div>
+
+                <div class="quick-card">
+                    <h4>Present Participle</h4>
+                    <p>The verb form ending in -ing, used in continuous tenses.</p>
+                    <p class="formula">Examples: working, studying, going, eating, writing</p>
+                </div>
+
+                <div class="quick-card">
+                    <h4>Gerund</h4>
+                    <p>A verb ending in -ing that functions as a noun. While identical in form to the present participle, gerunds name activities or states.</p>
+                    <p class="formula">Examples: "Swimming is healthy." / "I enjoy reading."</p>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Note: In "I am swimming," swimming is a present participle. In "Swimming is fun," swimming is a gerund.</p>
+                </div>
+
+                <div class="quick-card">
+                    <h4>Auxiliary Verbs (Helping Verbs)</h4>
+                    <p>Verbs that help form tenses, questions, and negatives.</p>
+                    <p class="formula">Common auxiliaries: am, is, are, was, were, have, has, had, will, would, shall</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Reference -->
+        <section id="quick-reference">
+            <div class="section-header">
+                <h2>Quick Reference</h2>
+                <p>Time management and success criteria at a glance</p>
+            </div>
+
+            <div class="content-card">
+                <h3>Time Management</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Task</th>
+                            <th>Time</th>
+                            <th>Word Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Writing Task 1</td>
+                            <td>20 min</td>
+                            <td>150-180 words</td>
+                        </tr>
+                        <tr>
+                            <td>Writing Task 2</td>
+                            <td>40 min</td>
+                            <td>250-280 words</td>
+                        </tr>
+                        <tr>
+                            <td>Speaking Part 1</td>
+                            <td>4-5 min</td>
+                            <td>15-25 sec/answer</td>
+                        </tr>
+                        <tr>
+                            <td>Speaking Part 2</td>
+                            <td>3-4 min</td>
+                            <td>2 min monologue</td>
+                        </tr>
+                        <tr>
+                            <td>Speaking Part 3</td>
+                            <td>4-5 min</td>
+                            <td>40-60 sec/answer</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="content-card">
+                <h3>Band 7+ Success Criteria</h3>
+
+                <h4>Writing</h4>
+                <div class="success-box">
+                    <p><span class="check">✅</span> Clear position/overview throughout</p>
+                    <p><span class="check">✅</span> Well-developed arguments with examples</p>
+                    <p><span class="check">✅</span> Cohesive with varied linking devices</p>
+                    <p><span class="check">✅</span> Wide vocabulary range with collocations</p>
+                    <p><span class="check">✅</span> Complex sentence variety</p>
+                    <p><span class="check">✅</span> Minimal grammar/spelling errors</p>
+                    <p><span class="check">✅</span> Fully addresses all parts of question</p>
+                </div>
+
+                <h4>Speaking</h4>
+                <div class="success-box">
+                    <p><span class="check">✅</span> Fluent with minimal hesitation</p>
+                    <p><span class="check">✅</span> Extended, developed responses</p>
+                    <p><span class="check">✅</span> Wide vocabulary range used naturally</p>
+                    <p><span class="check">✅</span> Complex grammar structures</p>
+                    <p><span class="check">✅</span> Clear pronunciation</p>
+                    <p><span class="check">✅</span> Coherent ideas with logical connections</p>
+                    <p><span class="check">✅</span> Critical thinking demonstrated (Part 3)</p>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3>Final Tips</h3>
+
+                <div class="quick-grid">
+                    <div class="quick-card">
+                        <h4>Writing</h4>
+                        <ul>
+                            <li>Plan before writing (5 minutes Task 2)</li>
+                            <li>Always include overview in Task 1</li>
+                            <li>Use collocations naturally (8-12 per essay)</li>
+                            <li>Check for errors (last 3-5 minutes)</li>
+                            <li>Never copy word-for-word from question</li>
+                        </ul>
+                    </div>
+
+                    <div class="quick-card">
+                        <h4>Speaking</h4>
+                        <ul>
+                            <li>Extend every answer (never one sentence)</li>
+                            <li>Use specific examples</li>
+                            <li>Show range of grammar and vocabulary</li>
+                            <li>Stay calm and natural</li>
+                            <li>Part 3: Think like a university seminar</li>
+                        </ul>
+                    </div>
+
+                    <div class="quick-card">
+                        <h4>Practice</h4>
+                        <ul>
+                            <li>Record yourself speaking (check timing)</li>
+                            <li>Write timed essays weekly</li>
+                            <li>Learn collocations in context</li>
+                            <li>Get feedback on your work</li>
+                            <li>Review band descriptors regularly</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Good luck with your IELTS exam! 🎯</p>
+        <p style="margin-top: 0.5rem; font-size: 0.85rem;">
+            IELTS Academic Complete Guide - Your pathway to Band 7+
+        </p>
+    </footer>
+
+    <!-- JavaScript for mobile menu -->
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Close menu when clicking a link (mobile)
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const navLinks = document.getElementById('navLinks');
+                if (window.innerWidth <= 768) {
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+
+        // Smooth scroll highlighting (optional)
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-links a');
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.style.color = '';
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.style.color = 'var(--accent-cyan)';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
